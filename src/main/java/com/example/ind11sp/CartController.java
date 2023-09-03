@@ -18,9 +18,8 @@ public class CartController {
     }
 
     @GetMapping("/add")
-    public void Add(@RequestParam List<Integer> ids){
-        System.out.println(ids);
-    //cartService.add(ids);
+    public void add(@RequestParam Integer[] ids){
+    cartService.add(ids);
     }
     @GetMapping("/get")
     public List<Integer> get(){
